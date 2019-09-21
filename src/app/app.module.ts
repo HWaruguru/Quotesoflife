@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteListComponent } from './quotes/quote-list.component';
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuoteListComponent
+    QuoteListComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
