@@ -1,35 +1,13 @@
 <div class="card">
   <div class="card-header">
-    {{pageTitle}}
+    <blockquote class="blockquote mb-0">
+      <p>{{quotes.quote}}. Mix and match multiple content types to create the card you need, or throw everything in
+        there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
+      </p>
+      <footer class="blockquote-footer"><cite title="Source Title">{{quotes.author}}</cite></footer>
+    </blockquote>
   </div>
-
   <div class="card-body">
-    <div class="row">
-      <div class="col-md-2">Filter by: </div>
-      <div class="col-md-4">
-        <input type="text" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <button class="btn btn-primary">
-                Add Quotes
-              </button>
-      </div>
-    </div>
-
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Quotes</th>
-            <th>Upvotes and Downvotes</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-        </tbody>
-      </table>
-    </div>
+    <p class="text-muted">By: {{quotes.createdBy}}, <span>{{quotes.date | timeAgo}}.</span> <span></span> {{quotes.upvotes}} {{quotes.downvotes}}</p>
   </div>
 </div>
