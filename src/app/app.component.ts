@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'lq-root',
-  template: `
-  <div><h1>{{pageTitle}}</h1>
-    <ql-quotes></ql-quotes>
-  </div>
-  `
+  templateUrl: './app.component.html', 
+  styleUrls: ['./app.component.css']
 })
   
 export class AppComponent {

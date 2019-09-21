@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
 })
 
 export class QuoteListComponent {
-    pageTitle: string = 'Quotes List';
+    quotes: object = {quote: 'When you have a dream, you\'ve got to grab it and never let go',
+                      author: 'Carol Burnett',
+                      date: new Date('2019, 09, 12'),
+                      createdBy:'Hannah',
+                      upvotes: 0,
+                      downvotes: 0
+
+                      }
 
 }
