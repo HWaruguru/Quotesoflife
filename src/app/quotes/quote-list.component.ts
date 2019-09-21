@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'ql-quotes',
-    templateUrl: './quote-list.component.html'
+    templateUrl: './quote-list.component.html',
+    styleUrls: ['./quote-list.component.css']
 })
 
 export class QuoteListComponent {

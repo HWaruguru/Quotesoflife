@@ -8,6 +8,9 @@
     </blockquote>
   </div>
   <div class="card-body">
-    <p class="text-muted">By: {{quotes.createdBy}}, <span>{{quotes.date | timeAgo}}.</span> <span></span> {{quotes.upvotes}} {{quotes.downvotes}}</p>
+    <div class="quote-meta">
+        <span class="text-muted"> By: {{quotes.createdBy}}, {{quotes.date | timeAgo}}.</span>
+        <span class="text-muted vote"> <i class="fa fa-fw fa-thumbs-up"></i> {{quotes.upvotes}} <i class="fa fa-fw fa-thumbs-down"></i> {{quotes.downvotes}}</span>
+    </div>
   </div>
 </div>
