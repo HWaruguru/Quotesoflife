@@ -1,12 +1,16 @@
-import { Directive, ElementRef} from '@angular/core';
+import { Directive, ElementRef, Input} from '@angular/core';
 
 @Directive({
-  selector: '[appHighlight]'
+  selector: '[quoteHighlight]'
 })
 export class HighlightDirective {
-
+  @Input('quoteHighlight') highlight: boolean;
   constructor(private elem:ElementRef) {
-    this.elem.nativeElement.style.textDecoration='highlight';
   }
 
+  ngOnInit() {
+    if (this.highlight) {
+      this.elem.nativeElement.style.backgroundColor='#F4DECB';
+    }
+  }
 }

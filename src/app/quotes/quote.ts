@@ -7,11 +7,5 @@ export class Quote {
         // this.upvotes = upvotes;
         // this.downvotes = downvotes;
     }
-    upvote() {
-        this.upvotes += 1
-    }
-
-    downvote() {
-        this.downvotes += 1
-    }
+    public popular: boolean = false;
 }

@@ -1,5 +1,5 @@
-<div *ngFor='let quote of quotes;'>
-  <div class="card">
+<div *ngFor='let quote of quotes; let i = index'>
+  <div class="card" [quoteHighlight]="quote.popular">
     <div class="card-header">
       <blockquote class="blockquote mb-0">
         <p>{{quote.quote}}</p>
@@ -10,8 +10,8 @@
       <div class="quote-meta">
         <span class="text-muted"> By: {{quote.createdBy}}, {{quote.date | timeAgo}}.</span>
         <span class="text-muted vote">
-          <span class="vote" (click)="quote.upvote()"><i class="fa fa-fw fa-thumbs-up"></i> {{quote.upvotes}}</span>
-          <span class="vote" (click)="quote.downvote()"><i class="fa fa-fw fa-thumbs-down"></i>
+          <span class="vote" (click)="upvote(i)"><i class="fa fa-fw fa-thumbs-up"></i> {{quote.upvotes}}</span>
+          <span class="vote" (click)="downvote(i)"><i class="fa fa-fw fa-thumbs-down"></i>
             {{quote.downvotes}}</span>
         </span>
       </div>
