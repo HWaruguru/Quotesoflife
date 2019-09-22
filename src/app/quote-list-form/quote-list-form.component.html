@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <h5 class="text-center">Create a new Quote</h5>
   <hr>
   <form>
@@ -21,4 +21,42 @@
 
   </div>
   </form>
-</div>
+</div> -->
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h5 class="text-center">Create a new Quote</h5>
+    <hr>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+
+        <label for="description">Quote</label>
+        <textarea class="form-control" id="description" rows="4" required></textarea>
+
+      </div>
+      <div class="form-group">
+
+        <label for="name">Author</label>
+        <input type="text" required class="form-control" id="name">
+
+      </div>
+      <div class="form-group">
+
+        <label for="name">Created by</label>
+        <input type="text" required class="form-control" id="name">
+
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button type="button" class="btn addQuoteBtn" (click)="open(content)"><i class="fa fa-fw fa-plus"></i> Add Quote</button>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Quote } from './quote'
-import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
     selector: 'ql-quotes',
@@ -31,10 +30,10 @@ export class QuoteListComponent {
     ]
 
     updateQuoteWithHighestVotes() {
-       const quoteVotes = this.quotes.map((quote) => quote.upvotes)
-       const idx = quoteVotes.indexOf(Math.max(...quoteVotes))
-       this.quotes = this.quotes.map((quote) => { return {...quote, popular: false}})
-       this.quotes[idx].popular = true
+        const quoteVotes = this.quotes.map((quote) => quote.upvotes)
+        const idx = quoteVotes.indexOf(Math.max(...quoteVotes))
+        this.quotes = this.quotes.map((quote) => { return { ...quote, popular: false } })
+        this.quotes[idx].popular = true
     }
 
     upvote(idx: number) {
