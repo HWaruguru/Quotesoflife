@@ -1,22 +1,24 @@
-<div class="card">
-  <div class="card-header">
-    <blockquote class="blockquote mb-0">
-      <p>{{quotes.quote}}. Mix and match multiple content types to create the card you need, or throw everything in
-        there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
-      </p>
-      <footer class="blockquote-footer"><cite title="Source Title">{{quotes.author}}</cite></footer>
-    </blockquote>
-  </div>
-  <div class="card-body">
-    <div class="quote-meta">
-      <span class="text-muted"> By: {{quotes.createdBy}}, {{quotes.date | timeAgo}}.</span>
-      <span class="text-muted vote">
-        <span class="vote" (click)="upvote()"><i class="fa fa-fw fa-thumbs-up"></i> {{quotes.upvotes}}</span>
-        <span class="vote" (click)="downvote()"><i class="fa fa-fw fa-thumbs-down"></i> {{quotes.downvotes}}</span>
-      </span>
+<div *ngFor='let quote of quotes;'>
+  <div class="card">
+    <div class="card-header">
+      <blockquote class="blockquote mb-0">
+        <p>{{quote.quote}}</p>
+        <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
+      </blockquote>
+    </div>
+    <div class="card-body">
+      <div class="quote-meta">
+        <span class="text-muted"> By: {{quote.createdBy}}, {{quote.date | timeAgo}}.</span>
+        <span class="text-muted vote">
+          <span class="vote" (click)="quote.upvote()"><i class="fa fa-fw fa-thumbs-up"></i> {{quote.upvotes}}</span>
+          <span class="vote" (click)="quote.downvote()"><i class="fa fa-fw fa-thumbs-down"></i>
+            {{quote.downvotes}}</span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
+
 <!-- <div class="col-md-6">
   <app-quote-list-form></app-quote-list-form>
 </div> -->
