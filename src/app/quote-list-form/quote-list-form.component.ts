@@ -23,7 +23,7 @@ export class QuoteListFormComponent {
     });
   }
 
-  private submitForm() {
+  public submitForm() {
     this.activeModal.close(this.myForm.value);
   }
 

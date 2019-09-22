@@ -6,7 +6,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteListComponent } from './quotes/quote-list.component';
-import { TimeAgoPipe } from 'time-ago-pipe';
+import { TimeAgoPipe } from './time-ago.pipe';
 import { QuoteListFormComponent } from './quote-list-form/quote-list-form.component';
 import { HighlightDirective } from './highlight.directive';
 
