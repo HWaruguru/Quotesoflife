@@ -10,7 +10,7 @@ export class HighlightDirective {
 
   ngOnInit() {
     if (this.highlight) {
-      this.elem.nativeElement.style.backgroundColor='#F4DECB';
+      this.elem.nativeElement.style.backgroundColor='#cbf4ee';
     }
   }
 }
