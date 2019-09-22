@@ -2,3 +2,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.vote {
+  margin-left: 1em;
+  user-select: none;
+}
+
+.vote:hover {
+  cursor: pointer;
+}

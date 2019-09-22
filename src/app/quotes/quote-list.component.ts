@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
 })
 
 export class QuoteListComponent {
-    quotes: object = {quote: 'When you have a dream, you\'ve got to grab it and never let go',
-                      author: 'Carol Burnett',
-                      date: new Date('2019, 09, 12'),
-                      createdBy:'Hannah',
-                      upvotes: 0,
-                      downvotes: 0
+    quotes: object = {
+        quote: 'When you have a dream, you\'ve got to grab it and never let go',
+        author: 'Carol Burnett',
+        date: new Date('2019, 09, 12'),
+        createdBy: 'Hannah',
+        upvotes: 0,
+        downvotes: 0
+    }
+    upvote() {
+        this.quotes.upvotes += 1
+    }
 
-                      }
-
+    downvote() {
+        this.quotes.downvotes += 1
+    }
 }

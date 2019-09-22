@@ -9,8 +9,11 @@
   </div>
   <div class="card-body">
     <div class="quote-meta">
-        <span class="text-muted"> By: {{quotes.createdBy}}, {{quotes.date | timeAgo}}.</span>
-        <span class="text-muted vote"> <i class="fa fa-fw fa-thumbs-up"></i> {{quotes.upvotes}} <i class="fa fa-fw fa-thumbs-down"></i> {{quotes.downvotes}}</span>
+      <span class="text-muted"> By: {{quotes.createdBy}}, {{quotes.date | timeAgo}}.</span>
+      <span class="text-muted vote">
+        <span class="vote" (click)="upvote()"><i class="fa fa-fw fa-thumbs-up"></i> {{quotes.upvotes}}</span>
+        <span class="vote" (click)="downvote()"><i class="fa fa-fw fa-thumbs-down"></i> {{quotes.downvotes}}</span>
+      </span>
     </div>
   </div>
 </div>
