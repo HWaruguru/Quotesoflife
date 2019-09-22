@@ -1,36 +1,30 @@
-import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-
+import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-quote-list-form',
   templateUrl: './quote-list-form.component.html',
   styleUrls: ['./quote-list-form.component.css']
 })
-export class QuoteListFormComponent implements OnInit {
+export class QuoteListFormComponent {
+  @Input() quote: object;
+  myForm: FormGroup;
 
-
-  closeResult: string;
-
-  constructor(private modalService: NgbModal) {}
-  ngOnInit() {
+  constructor( public activeModal: NgbActiveModal, private formBuilder: FormBuilder) {
+    this.createForm();
   }
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+
+  private createForm() {
+    this.myForm = this.formBuilder.group({
+      quote: '',
+      author: '',
+      addedBy: ''
     });
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
+  private submitForm() {
+    this.activeModal.close(this.myForm.value);
   }
 
 }

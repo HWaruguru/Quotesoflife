@@ -1,8 +1,7 @@
 <nav class='navbar navbar-light bg-light'>
   <a class='navbar-brand'>{{pageTitle}}</a>
-  <app-quote-list-form></app-quote-list-form>
+  <button type="button" class="btn addQuoteBtn" (click)="openFormModal()"><i class="fa fa-fw fa-plus"></i> Add Quote</button>
 </nav>
 <div class="container">
-  <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
-  <ql-quotes></ql-quotes>
+  <ql-quotes [quotes]='quotes'></ql-quotes>
 </div>
