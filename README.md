@@ -1,5 +1,5 @@
 # Description
-A web application for a quotes application that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote my pizza place which the quotes and the quote with the highest upvote will be highlighteed.
+A web application for a quotes application that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote the quotes and the quote with the highest upvote will be highlighted.
 #### By *Hannah Waruguru
 
 ## Setup/Installation Requirements
